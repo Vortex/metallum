@@ -2,10 +2,14 @@ source "http://rubygems.org"
 
 gem 'mechanize'
 
-group :development do
-  gem "rspec", "~> 2.3.0"
-  gem "bundler", "~> 1.0.0"
-  gem "jeweler", "~> 1.5.2"
+group :development, :test do
+  gem "rspec", "~> 2.6.0"
+  gem "bundler"
+  gem "jeweler"
+  gem "guard"
+  gem "guard-rspec"
+  gem "rb-inotify"
+  gem "libnotify"
 end
 
 # Specify your gem's dependencies in metallum.gemspec

@@ -17,4 +17,5 @@ describe Metallum do
     band = @agent.fetch_band
     band.name.should == "Blind Guardian"
   end
+
 end
