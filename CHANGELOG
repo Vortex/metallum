@@ -3,3 +3,5 @@
 Peco Danajlovski <vortexmk@gmail.com>
 * Started this CHANGELOG
 * Introduced guard for automatic testing
+* Implemented the fetching of basic band info
+* Version bump to 0.1.0
