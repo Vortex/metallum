@@ -10,3 +10,4 @@ Peco Danajlovski <vortexmk@gmail.com>
 ----------
 Peco Danajlovski <vortexmk@gmail.com>
 * Implemented fetching of all album urls from band's discography
+* Refactored the classes into separate files
