@@ -5,3 +5,8 @@ Peco Danajlovski <vortexmk@gmail.com>
 * Introduced guard for automatic testing
 * Implemented the fetching of basic band info
 * Version bump to 0.1.0
+
+10.09.2011
+----------
+Peco Danajlovski <vortexmk@gmail.com>
+* Implemented fetching of all album urls from band's discography

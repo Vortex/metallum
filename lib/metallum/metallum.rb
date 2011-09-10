@@ -1,22 +1,34 @@
 module Metallum
 
+  # DISCOGRAPHY_URL = "http://www.metal-archives.com/band/discography/id/3/tab/all"
+
   class Agent
 
-    def initialize(band_url)
+    def initialize(url)
       @agent = Mechanize.new
-      @page = @agent.get(band_url)
+      @page = @agent.get(url)
+      @discography = @agent.get("http://www.metal-archives.com/band/discography/id/#{extract_band_id}/tab/all")
     end
 
     def fetch_band
-      band = Band.new(@page) 
+      band = Band.new(@page, @discography) 
+    end
+ 
+    def fetch_album
+      album = Album.new(@page)
     end
 
+    def extract_band_id
+      @page.uri.to_s.match(/\/(\d+)/)[1]
+    end
+   
   end
 
   class Band
 
-    def initialize(band_page)
+    def initialize(band_page, discography_page)
       @page = band_page
+      @discography = discography_page
     end
 
     def name
@@ -67,6 +79,10 @@ module Metallum
     def logo_url
       element = @page.search("//a[@id='logo']//img")
       element.attribute("src").text
+    end
+
+    def album_urls
+      elements = @discography.search("//tbody//tr//td[1]/a").map { |el| el.attribute("href").text }
     end
 
   end
