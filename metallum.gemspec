@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Peco Danajlovski"]
   s.email       = ["vortexmk@gmail.com"]
   s.homepage    = "http://mkmetal.mk"
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Metallum is a simple gem that fetches various data from metal-archives.com}
+  s.description = %q{Metallum is a simple gem that fetches various data from metal-archives.com}
 
   s.rubyforge_project = "metallum"
 
