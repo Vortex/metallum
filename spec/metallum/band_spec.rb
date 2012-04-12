@@ -14,7 +14,7 @@ describe "Band" do
     band = @agent.fetch_band
     band.name.should == "Hell"
   end
-  
+
   it "should fetch the band's name from url for band 'Blind Guardian'" do
     @band.name.should == "Blind Guardian"
   end
@@ -44,11 +44,11 @@ describe "Band" do
   end
 
   it "should fetch band's record label" do
-    @band.record_label.should == "Nuclear Blast Records"
+    @band.record_label.should == "Nuclear Blast"
   end
 
   it "should fetch band's photo url" do
-    @band.photo_url.should == "http://www.metal-archives.com/images/3/3_photo.jpg"
+    @band.photo_url.should == "http://www.metal-archives.com/images/3/3_photo.jpg?1846"
   end
 
   it "should fetch band's logo url" do

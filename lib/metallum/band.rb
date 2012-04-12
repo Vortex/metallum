@@ -7,7 +7,7 @@ class Band
 
   def name
     element = @page.search("h1[@class='band_name']")
-    element.text.strip!
+    element.text.strip
   end
 
   def country

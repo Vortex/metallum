@@ -1,10 +1,3 @@
-09.09.2011
-----------
-Peco Danajlovski <vortexmk@gmail.com>
-* Started this CHANGELOG
-* Introduced guard for automatic testing
-* Implemented fetching basic band info
-* Version bump to 0.1.0
 
 10.09.2011
 ----------
@@ -13,3 +6,12 @@ Peco Danajlovski <vortexmk@gmail.com>
 * Refactored the classes into separate files
 * Implemented fetching basic info for albums
 * Version bump to 0.2.0
+
+09.09.2011
+----------
+Peco Danajlovski <vortexmk@gmail.com>
+* Started this CHANGELOG
+* Introduced guard for automatic testing
+* Implemented fetching basic band info
+* Version bump to 0.1.0
+
