@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "Band" do
 
-  before(:each) do
+  before(:all) do
     @band_url = 'http://www.metal-archives.com/bands/Blind_Guardian/3'
     @agent = Metallum::Agent.new(@band_url)
     @band = @agent.fetch_band
