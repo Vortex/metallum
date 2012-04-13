@@ -11,7 +11,9 @@ Peco Danajlovski <vortexmk@gmail.com>
 * Implemented fetching of all album urls from band's discography
 * Refactored the classes into separate files
 * Implemented fetching basic info for albums
-* Version bump to 0.2.0
+* Moved Band and Album under Metallum namespace
+* Fixed gem dependencies
+* Version bump to 0.2.3
 
 09.09.2011
 ----------
