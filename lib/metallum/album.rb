@@ -1,7 +1,7 @@
 module Metallum
   class Album
     
-    def initialize(album_page) 
+    def initialize(album_page = "") 
       @page = album_page
     end
 
@@ -28,6 +28,11 @@ module Metallum
     def record_label
       element = @page.search("//div[@id='album_info']//dl[2]//dd[1]")
       element.text
+    end
+
+    def cover_url
+      element = @page.search("//a[@id='cover']//img")
+      element.attribute("src").text
     end
 
     def track_list

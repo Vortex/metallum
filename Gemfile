@@ -12,6 +12,8 @@ group :development, :test do
   gem "libnotify"
   gem "vcr"
   gem "webmock"
+  gem "httparty"
+  gem "nokogiri"
 end
 
 # Specify your gem's dependencies in metallum.gemspec

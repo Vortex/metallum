@@ -1,7 +1,8 @@
 16.06.2013
 ----------
 * Updated the gem to use latest changes on M.A
-* Version bump to 0.2.5
+* Introduced method to fetch all albums by month 
+* Version bump to 0.2.6
 
 13.04.2011
 ----------
