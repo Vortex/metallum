@@ -32,11 +32,11 @@ module Metallum
 
     def track_list
       tracks = []
-      elements = @page.search("//div[@id='album_tabs_tracklist']//table//tbody//tr[@class='odd' or @class='even']")
+      elements = @page.search("//table[@class='display table_lyrics']//tbody//tr[@class='odd' or @class='even']")
       elements.each do |element|
         track = Track.new
-        track.title = element.children[2].text.strip
-        track.duration = element.children[4].text.strip
+        track.title = element.children[3].text.strip
+        track.duration = element.children[5].text.strip
         tracks << track
       end
       return tracks

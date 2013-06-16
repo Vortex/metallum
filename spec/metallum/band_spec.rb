@@ -36,11 +36,11 @@ describe "Band" do
   end
 
   it "should fetch the band's genre" do
-    @band.genre.should == "Speed Metal (early), Power Metal (Later)"
+    @band.genre.should == "Speed Metal (early), Power Metal (later)"
   end
 
   it "should fetch band's lyrical themes" do
-    @band.lyrical_themes.should == "Epic Tales, Legends, Fantasy, Tolkien, Literature"
+    @band.lyrical_themes.should == "Epic Tales, Legends/Myths, Fantasy, Tolkien, Literature"
   end
 
   it "should fetch band's record label" do
