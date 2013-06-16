@@ -10,7 +10,8 @@ group :development, :test do
   gem "guard-rspec"
   gem "rb-inotify"
   gem "libnotify"
-  gem 'vcr'
+  gem "vcr"
+  gem "webmock"
 end
 
 # Specify your gem's dependencies in metallum.gemspec

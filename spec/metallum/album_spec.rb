@@ -3,9 +3,11 @@ require 'spec_helper'
 describe "Album" do
 
   before(:all) do
-    @album_url = "http://www.metal-archives.com/albums/Dream_Theater/A_Dramatic_Turn_of_Events/309671"
-    @agent = Metallum::Agent.new(@album_url)
-    @album = @agent.fetch_album
+    VCR.use_cassette('album') do
+      @album_url = "http://www.metal-archives.com/albums/Dream_Theater/A_Dramatic_Turn_of_Events/309671"
+      @agent = Metallum::Agent.new(@album_url)
+      @album = @agent.fetch_album
+    end
   end
 
   context "album info" do

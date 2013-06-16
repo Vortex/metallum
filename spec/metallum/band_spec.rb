@@ -3,16 +3,20 @@ require 'spec_helper'
 describe "Band" do
 
   before(:all) do
-    @band_url = 'http://www.metal-archives.com/bands/Blind_Guardian/3'
-    @agent = Metallum::Agent.new(@band_url)
-    @band = @agent.fetch_band
+    VCR.use_cassette('band') do
+      @band_url = 'http://www.metal-archives.com/bands/Blind_Guardian/3'
+      @agent = Metallum::Agent.new(@band_url)
+      @band = @agent.fetch_band
+    end
   end
 
   it "should fetch a band's name from url for band 'Hell'" do
-    @band_url = 'http://www.metal-archives.com/bands/Hell/5849'
-    @agent = Metallum::Agent.new(@band_url)
-    band = @agent.fetch_band
-    band.name.should == "Hell"
+    VCR.use_cassette('band2') do
+      @band_url = 'http://www.metal-archives.com/bands/Hell/5849'
+      @agent = Metallum::Agent.new(@band_url)
+      band = @agent.fetch_band
+      band.name.should == "Hell"
+    end
   end
 
   it "should fetch the band's name from url for band 'Blind Guardian'" do
