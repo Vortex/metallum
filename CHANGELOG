@@ -1,13 +1,16 @@
+16.06.2013
+----------
+* Updated the gem to use latest changes on M.A
+* Version bump to 0.2.5
+
 13.04.2011
 ----------
-Peco Danajlovski <vortexmk@gmail.com>
 * Fixed some bugs
 * Updated the specs
 * Version bump to 0.2.4
 
 10.09.2011
 ----------
-Peco Danajlovski <vortexmk@gmail.com>
 * Implemented fetching of all album urls from band's discography
 * Refactored the classes into separate files
 * Implemented fetching basic info for albums
@@ -17,7 +20,6 @@ Peco Danajlovski <vortexmk@gmail.com>
 
 09.09.2011
 ----------
-Peco Danajlovski <vortexmk@gmail.com>
 * Started this CHANGELOG
 * Introduced guard for automatic testing
 * Implemented fetching basic band info
