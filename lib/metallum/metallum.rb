@@ -30,21 +30,17 @@ module Metallum
       offset = 0
       totalRecords = 10000
       while (offset < totalRecords) do
-        puts "Total records: #{totalRecords}"
-        puts "Offset: #{offset}"
         url = "http://metal-archives.com/search/ajax-advanced/searching/albums/?releaseYearFrom=#{year_from}&releaseMonthFrom=#{month_from}&releaseYearTo=#{year_to}&releaseMonthTo=#{month_to}&releaseType[]=1&iDisplayStart=#{offset}&iDisplayLength=300"       
         uri = URI.encode(url)
         result = HTTParty.get(uri) 
-        puts "Album count: #{result['aaData'].size}"
         totalRecords = result["iTotalRecords"]
         albumsData += result["aaData"]
         offset += 200
       end
-     
+
       albumsData.each do |albumData|
         doc = Nokogiri::HTML.parse(albumData[1])
         href = doc.css('a')[0]["href"]
-        puts href
         agent = Metallum::Agent.new(href)
         album = agent.fetch_album
         albums << album

@@ -46,7 +46,7 @@ module Metallum
       end
       return tracks
     end
-    
+
     class Track
 
       attr_accessor :title, :duration
@@ -56,6 +56,6 @@ module Metallum
       end
 
     end
-       
+
   end
 end
