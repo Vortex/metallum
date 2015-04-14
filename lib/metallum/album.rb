@@ -32,7 +32,9 @@ module Metallum
 
     def cover_url
       element = @page.search("//a[@id='cover']//img")
-      element.attribute("src").text
+      unless element.empty?
+        element.attribute("src").text
+      end
     end
 
     def track_list
