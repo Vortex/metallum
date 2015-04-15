@@ -1,5 +1,7 @@
 module Metallum
   class Album
+
+    attr_accessor :band_url
     
     def initialize(album_page = "") 
       @page = album_page
