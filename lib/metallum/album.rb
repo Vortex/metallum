@@ -7,6 +7,10 @@ module Metallum
       @page = album_page
     end
 
+    def album_id
+      @page.uri.to_s.match(/\/albums\/(.*)/)[1]
+    end
+
     def title
       element = @page.search("//h1[@class='album_name']")
       element.text
@@ -15,6 +19,12 @@ module Metallum
     def band_name
       element = @page.search("//h2[@class='band_name']")
       element.text
+    end
+
+    def band_id
+      element = @page.search("//h2[@class='band_name']//a")
+      href = element.attribute('href').text
+      href.match(/\/bands\/(.*)/)[1]
     end
 
     def album_type

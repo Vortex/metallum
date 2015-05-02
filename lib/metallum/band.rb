@@ -6,6 +6,10 @@ module Metallum
       @discography = discography_page
     end
 
+    def band_id
+      @page.uri.to_s.match(/\/bands\/(.*)/)[1]
+    end
+
     def name
       element = @page.search("h1[@class='band_name']")
       element.text.strip
