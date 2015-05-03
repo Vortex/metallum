@@ -21,4 +21,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "vcr"
   s.add_runtime_dependency(%q<mechanize>, ["~> 2.0.1"])
   s.add_runtime_dependency 'httparty'
+  s.add_runtime_dependency 'activesupport'
 end

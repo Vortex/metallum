@@ -1,3 +1,5 @@
+require 'active_support/core_ext/string'
+
 module Metallum
   class Album
 
@@ -40,6 +42,19 @@ module Metallum
     def record_label
       element = @page.search("//div[@id='album_info']//dl[2]//dd[1]")
       element.text
+    end
+
+    def review_count
+      element = @page.search("//*[@id='album_info']/dl[2]/dd[3]/text()[1]")
+      count = element.text.squish
+      count == "None yet" ? 0 : count
+    end
+
+    def review_score
+      element = @page.search("//*[@id='album_info']/dl[2]/dd[3]/text()[2]")
+      score = element.text
+      score = score.match(/\.(.*)%/)
+      score ? score[1].squish : 0
     end
 
     def cover_url

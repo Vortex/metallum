@@ -1,3 +1,9 @@
+03.05.2014
+----------
+* Introduced review count and review score for albums
+* Added band and album ids
+* Version bump to 0.2.10
+
 16.06.2013
 ----------
 * Updated the gem to use latest changes on M.A

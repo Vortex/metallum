@@ -32,6 +32,14 @@ describe "Album" do
       @album.record_label.should == "Roadrunner Records"
     end
 
+    it "should fetch the number of reviews" do
+      @album.review_count.should == "23"
+    end
+
+    it "should fetch the average review score" do
+      @album.review_score.should == "82"
+    end
+
     it "should fetch track list" do
       @album.track_list.size == 9
     end
