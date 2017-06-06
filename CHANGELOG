@@ -1,3 +1,8 @@
+06.06.2017 (0.2.12)
+-------------------
+* Fixed the issue with Album class not loading properly
+* Updated ruby to 2.4.0
+
 03.05.2014
 ----------
 * Introduced review count and review score for albums
@@ -7,7 +12,7 @@
 16.06.2013
 ----------
 * Updated the gem to use latest changes on M.A
-* Introduced method to fetch all albums by month 
+* Introduced method to fetch all albums by month
 * Version bump to 0.2.6
 
 13.04.2011
@@ -31,4 +36,3 @@
 * Introduced guard for automatic testing
 * Implemented fetching basic band info
 * Version bump to 0.1.0
-

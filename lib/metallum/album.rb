@@ -2,11 +2,10 @@ require 'active_support/core_ext/string'
 
 module Metallum
   class Album
-    include 
-
+      
     attr_accessor :band_url
-    
-    def initialize(album_page = "") 
+
+    def initialize(album_page = "")
       @page = album_page
     end
 
